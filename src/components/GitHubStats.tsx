@@ -1,6 +1,17 @@
-import { motion } from 'framer-motion';
-import { GitBranch, Star, GitFork, Users, Code, Activity, Calendar, Link as LinkIcon, MapPin, Briefcase } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import {
+  GitBranch,
+  Star,
+  GitFork,
+  Users,
+  Code,
+  Activity,
+  Calendar,
+  Link as LinkIcon,
+  MapPin,
+  Briefcase,
+} from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface GitHubStats {
   login: string;
@@ -38,7 +49,7 @@ const featuredRepos = [
   "Melodify",
   "roomzy",
   "talentlink",
-  "R-CloudFlareBypasser"
+  "R-CloudFlareBypasser",
 ];
 
 export default function GitHubStats() {
@@ -50,16 +61,18 @@ export default function GitHubStats() {
     const fetchGitHubData = async () => {
       try {
         const [statsRes, reposRes] = await Promise.all([
-          fetch('https://api.github.com/users/kstubhieeee'),
-          fetch('https://api.github.com/users/kstubhieeee/repos?per_page=100')
+          fetch("https://api.github.com/users/kstubhieeee"),
+          fetch("https://api.github.com/users/kstubhieeee/repos?per_page=100"),
         ]);
         const statsData = await statsRes.json();
         const reposData = await reposRes.json();
         setStats(statsData);
-        const filteredRepos = reposData.filter((repo: Repository) => featuredRepos.includes(repo.name));
+        const filteredRepos = reposData.filter((repo: Repository) =>
+          featuredRepos.includes(repo.name)
+        );
         setRepos(filteredRepos);
       } catch (error) {
-        console.error('Error fetching GitHub data:', error);
+        console.error("Error fetching GitHub data:", error);
       } finally {
         setLoading(false);
       }
@@ -90,7 +103,9 @@ export default function GitHubStats() {
           className="w-32 h-32 rounded-full border-4 border-emerald-500"
         />
         <div className="text-center md:text-left">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{stats?.name}</h2>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            {stats?.name}
+          </h2>
           <p className="text-emerald-500 font-medium">@{stats?.login}</p>
           <p className="mt-2 text-gray-600 dark:text-gray-300">{stats?.bio}</p>
           <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-4">
@@ -124,7 +139,12 @@ export default function GitHubStats() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 text-emerald-500 hover:underline"
               >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                 </svg>
                 Twitter
@@ -137,10 +157,10 @@ export default function GitHubStats() {
       {/* GitHub Stats Overview */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { icon: Users, label: 'Followers', value: stats?.followers },
-          { icon: Users, label: 'Following', value: stats?.following },
-          { icon: Code, label: 'Repositories', value: stats?.public_repos },
-          { icon: Activity, label: 'Gists', value: stats?.public_gists }
+          { icon: Users, label: "Followers", value: stats?.followers },
+          { icon: Users, label: "Following", value: stats?.following },
+          { icon: Code, label: "Repositories", value: stats?.public_repos },
+          { icon: Activity, label: "Gists", value: stats?.public_gists },
         ].map(({ icon: Icon, label, value }) => (
           <motion.div
             key={label}
@@ -149,8 +169,12 @@ export default function GitHubStats() {
             className="bg-white dark:bg-gray-800 rounded-lg p-4 text-center shadow-lg"
           >
             <Icon className="w-6 h-6 mx-auto mb-2 text-emerald-500" />
-            <h3 className="text-sm text-gray-600 dark:text-gray-400">{label}</h3>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white">{value}</p>
+            <h3 className="text-sm text-gray-600 dark:text-gray-400">
+              {label}
+            </h3>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white">
+              {value}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -168,7 +192,7 @@ export default function GitHubStats() {
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=kstubhieeee&theme=gotham&hide_border=false&include_all_commits=true&count_private=true&layout=compact"
             alt="Most Used Languages"
-            className="w-full rounded-lg"
+            className="w-8/12 rounded-lg"
           />
         </motion.div>
 
@@ -216,7 +240,7 @@ export default function GitHubStats() {
                 </div>
                 <GitBranch className="w-5 h-5 text-emerald-500" />
               </div>
-              
+
               <div className="flex items-center gap-4 mt-4 text-sm">
                 {repo.language && (
                   <span className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
