@@ -1,6 +1,6 @@
-# Kaustubh Portfolio
+# Kaustubh's Portfolio
 
-Welcome to the **Kaustubh Portfolio** repository! This project is a personal portfolio website showcasing Kaustubh's projects, skills, and experience in web development and software engineering.
+Welcome to the **Kaustubh's Portfolio** repository! This project is a personal portfolio website showcasing Kaustubh's projects, skills, and experience in web development and software engineering.
 
 ## Table of Contents
 
