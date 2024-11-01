@@ -19,7 +19,7 @@ export default function Terminal() {
     skills:
       "Languages: Python, Java, C, C++, JavaScript, SQL, HTML, CSS\nDeveloper Tools: VS Code, FlutterFlow, NetBeans, Replit, CodeSandbox, Figma, Postman API\nTechnologies/Frameworks: Linux, GitHub, ReactJS, NodeJS, ExpressJS, Git, MongoDB, jQuery, Bootstrap.",
     contact:
-      "Phone: +91-9321572497\nEmail: banekaustubh27@gmail.com\nGitHub: github.com/kstubhieeee\nLinkedIn: linkedin.com/in/kstubhie\n",
+      "Email: banekaustubh27@gmail.com\nGitHub: github.com/kstubhieeee\nLinkedIn: linkedin.com/in/kstubhie\n",
     education:
       "Shree L.R. Tiwari College of Engineering (2022 - 2026)\n - Bachelors in Computer Engineering, CGPA: 8.5\nDon Bosco Junior College (2020 - 2022)\n - Higher secondary education in sciences, Percentage: 72%",
     projects:

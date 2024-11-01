@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface SkillIconsProps {
   perRow?: number;
@@ -6,11 +6,22 @@ interface SkillIconsProps {
 
 export default function SkillIcons({ perRow = 8 }: SkillIconsProps) {
   const skills = [
-    'bash', 'blender', 'bootstrap', 'c', 'cpp', 'css', 'dart', 'express',
-    'figma', 'firebase', 'flutter', 'git', 'github', 'html', 'java', 'js',
-    'jquery', 'linux', 'mongodb', 'mysql', 'npm', 'nextjs', 'nodejs', 'ps',
-    'php', 'postman', 'py', 'react', 'redux', 'replit', 'tailwind', 'ubuntu',
-    'vite', 'vscode'
+    "bootstrap",
+    "css",
+    "express",
+    "figma",
+    "firebase",
+    "git",
+    "html",
+    "js",
+    "jquery",
+    "mongodb",
+    "mysql",
+    "nextjs",
+    "nodejs",
+    "react",
+    "redux",
+    "tailwind",
   ];
 
   // Split skills into rows
@@ -30,7 +41,7 @@ export default function SkillIcons({ perRow = 8 }: SkillIconsProps) {
           className="flex justify-center gap-2"
         >
           <img
-            src={`https://skillicons.dev/icons?i=${row.join(',')}`}
+            src={`https://skillicons.dev/icons?i=${row.join(",")}`}
             alt="Skill Icons"
             className="h-10 md:h-12"
           />

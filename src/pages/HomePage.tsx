@@ -296,14 +296,6 @@ export default function HomePage() {
                 <Mail className="w-5 h-5" />
                 <span>Email Me</span>
               </motion.a>
-              <motion.a
-                href="tel:+919321572497"
-                whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center justify-center gap-2 bg-gray-100 dark:bg-white/10 backdrop-blur-md text-gray-900 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-all font-medium"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call Me</span>
-              </motion.a>
             </div>
           </motion.div>
         </div>
