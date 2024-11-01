@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-blue-600 text-white;
+}
+
+.font-cabinet {
+  font-family: 'Cabinet Grotesk', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.section-transition {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Terminal Styles */
+#terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+#terminal-output::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+#terminal-output::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
