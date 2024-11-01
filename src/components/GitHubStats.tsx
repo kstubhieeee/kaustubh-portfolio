@@ -41,7 +41,7 @@ interface Repository {
 
 const featuredRepos = [
   "Data-Warehousing-and-Mining",
-  "To-do-list-with-ContextAPI-and-LocalStorage",
+
   "Password-Generator",
   "Notes-Keeper",
   "mental-health-tracker",
