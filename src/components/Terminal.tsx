@@ -82,6 +82,7 @@ export default function Terminal() {
               autoStart: true,
               delay: 50,
               cursor: "▋",
+              loop: true,
             }}
           />
         </div>
