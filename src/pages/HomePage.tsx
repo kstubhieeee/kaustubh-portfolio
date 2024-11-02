@@ -148,18 +148,18 @@ export default function HomePage() {
             style={{ opacity: contentOpacity }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
               Kaustubh Bane
             </h1>
-            <span className="text-3xl mb-5 items-center ">19</span>
-            <div className="flex flex-wrap justify-center gap-4 mt-3 text-gray-600 dark:text-gray-300 mb-4 font-inter">
-              <span className="flex text-xl items-center gap-1">
+            <span className="text-2xl md:text-3xl mb-5 items-center ">19</span>
+            <div className="flex flex-wrap justify-center gap-2 mt-3 text-gray-600 dark:text-gray-300 mb-4 font-inter">
+              <span className="flex text-lg md:text-xl items-center gap-1">
                 <MapPin className="w-4 h-4" />
                 Mumbai, Maharashtra
               </span>
             </div>
             <TypewriterHero />
-            <div className="flex justify-center gap-6 mt-8">
+            <div className="flex flex-wrap justify-center gap-4 mt-8">
               <motion.a
                 href="https://github.com/kstubhieeee"
                 target="_blank"
@@ -209,7 +209,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
               Education
             </h2>
           </motion.div>
@@ -234,7 +234,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
               Skills & Expertise
             </h2>
           </motion.div>
@@ -255,12 +255,12 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
               Featured Projects
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} {...project} index={index} />
             ))}
@@ -280,7 +280,7 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-cabinet text-gray-900 dark:text-white mb-4">
               Let's Connect
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-8 font-inter">
@@ -291,7 +291,7 @@ export default function HomePage() {
               <motion.a
                 href="mailto:banekaustubh27@gmail.com"
                 whileHover={{ scale: 1.05 }}
-                className="inline-flex items-center justify-center gap-2 bg-gray-100 dark:bg-white/10 backdrop-blur-md text-gray-900 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-all font-medium"
+                className="inline-flex items-center justify-center gap-2 bg-gray-100 dark:bg-white/10 backdrop-blur-md text-gray-900 dark:text-white px-6 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-white/20 transition-all font-medium"
               >
                 <Mail className="w-5 h-5" />
                 <span>Email Me</span>

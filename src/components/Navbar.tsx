@@ -137,9 +137,15 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown Menu with Sliding Animation */}
         {isOpen && (
-          <div className="md:hidden mt-2 bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4">
+          <motion.div
+            initial={{ x: "100%" }} // Start from the right
+            animate={{ x: 0 }} // Slide in to the position 0
+            exit={{ x: "100%" }} // Slide out to the right
+            transition={{ duration: 0.3 }} // Smooth transition
+            className="md:hidden mt-2 bg-white dark:bg-gray-900 shadow-lg rounded-lg p-4 absolute right-0 top-16 w-48" // Adjust width as needed
+          >
             <div className="flex flex-col gap-4">
               {links.map(({ icon: Icon, label, href }) => {
                 if (href.startsWith("/#") && isHomePage) {
@@ -180,7 +186,7 @@ export default function Navbar() {
               })}
               <ThemeToggle />
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </motion.nav>
