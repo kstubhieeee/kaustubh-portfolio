@@ -4,13 +4,10 @@ import GitHubPage from './pages/GitHubPage';
 import BlogPage from './pages/BlogPage';
 import NewBlogPost from './pages/NewBlogPost';
 import Navbar from './components/Navbar';
-import { useTheme } from './context/ThemeContext';
 
 function App() {
-  const { theme } = useTheme();
-
   return (
-    <div className={`transition-colors duration-300 ${theme === 'dark' ? 'dark' : ''}`}>
+    <div className="bg-[#000000]">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

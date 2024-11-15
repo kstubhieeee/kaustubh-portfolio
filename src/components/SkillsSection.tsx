@@ -1,99 +1,98 @@
-import { motion } from "framer-motion";
-import { Award } from "lucide-react";
-import SkillIcons from "./SkillIcons";
+import { useEffect, useRef } from 'react';
 
-interface SkillsSectionProps {
-  skills: {
-    languages: string[];
-    tools: string[];
-    technologies: string[];
-    courses: string[];
-  };
-  certifications: string[];
-}
+const CUSTOM_LAYOUTS = {
+  60: [Math.PI / 4],
+  100: [-Math.PI / 6, Math.PI / 2],
+  140: [0, -Math.PI / 2.5, (2 * Math.PI) / 3],
+  180: [-Math.PI / 2, Math.PI / 2.5, (5 * Math.PI) / 4, (3 * Math.PI) / 1.5],
+  220: [Math.PI / 6, -Math.PI / 1.5, (2 * Math.PI) / 2.5, Math.PI, (5 * Math.PI) / 3],
+};
 
-export default function SkillsSection({
-  skills,
-  certifications,
-}: SkillsSectionProps) {
-  // Combine all skills into one array for the icons
-  const allSkills = [
-    ...skills.languages,
-    ...skills.tools,
-    ...skills.technologies,
-  ];
+const OrbitingIcon = ({ angle, radius, icon, size = 45 }) => {
+  const iconRef = useRef(null);
+
+  useEffect(() => {
+    if (iconRef.current) {
+      iconRef.current.style.left = `calc(50% + ${Math.cos(angle) * radius}px)`;
+      iconRef.current.style.top = `calc(50% + ${Math.sin(angle) * radius}px)`;
+    }
+  }, [angle, radius]);
 
   return (
-    <div className="space-y-12">
-      {/* Skill Icons */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="bg-white dark:bg-white/10 rounded-lg p-6 shadow-lg"
-      >
-        <h3 className="text-xl font-bold text-center text-gray-900 dark:text-white mb-8">
-          Technologies & Tools
-        </h3>
-        <SkillIcons skills={allSkills} />
-      </motion.div>
+    <div
+      ref={iconRef}
+      className="absolute transition-all duration-500"
+      style={{
+        width: size,
+        height: size,
+        transform: 'translate(-50%, -50%)',
+      }}
+    >
+      <img
+        src={`https://skillicons.dev/icons?i=${icon}`}
+        alt={icon}
+        className="w-full h-full rounded-full bg-black/50 p-1.5 hover:scale-110 transition-transform"
+      />
+    </div>
+  );
+};
 
-      {/* Course Skills & Certifications */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white dark:bg-white/10 rounded-lg p-6 shadow-lg"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg">
-              <Award className="w-5 h-5 text-orange-600 dark:text-orange-400" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Course Skills
-            </h3>
-          </div>
-          <ul className="space-y-2">
-            {skills.courses.map((course) => (
-              <li
-                key={course}
-                className="text-gray-700 dark:text-gray-300 flex items-center gap-2"
-              >
-                <Award className="w-4 h-4  dark:text-orange-400" />
-                {course}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+const OrbitRing = ({ radius }) => (
+  <div
+    className="absolute border border-white/10 rounded-full animate-pulse"
+    style={{
+      width: radius * 2,
+      height: radius * 2,
+      left: '50%',
+      top: '50%',
+      transform: 'translate(-50%, -50%)',
+    }}
+  />
+);
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white dark:bg-white/10 rounded-lg p-6 shadow-lg"
-        >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-pink-100 dark:bg-pink-900 rounded-lg">
-              <Award className="w-5 h-5 text-pink-600 dark:text-pink-400" />
-            </div>
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Certifications
-            </h3>
-          </div>
-          <ul className="space-y-2">
-            {certifications.map((cert) => (
-              <li
-                key={cert}
-                className="text-gray-700 dark:text-gray-300 flex items-center gap-2"
-              >
-                <Award className="w-4 h-4 text-pink-500" />
-                {cert}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+export default function SkillsSection() {
+  const skills = [
+    { icon: 'react', radius: 60 },
+    { icon: 'js', radius: 100 },
+    { icon: 'nodejs', radius: 100 },
+    { icon: 'css', radius: 140 },
+    { icon: 'ts', radius: 140 },
+    { icon: 'express', radius: 180 },
+    { icon: 'nextjs', radius: 180 },
+    { icon: 'mongodb', radius: 180 },
+    { icon: 'mysql', radius: 220 },
+    { icon: 'firebase', radius: 220 },
+    { icon: 'bootstrap', radius: 220 },
+    { icon: 'tailwind', radius: 220 },
+    { icon: 'redux', radius: 220 },
+  ];
+
+  const rings = [60, 100, 140, 180, 220];
+  const groupedSkills = rings.map((radius) => skills.filter((skill) => skill.radius === radius));
+
+  return (
+    <div className="relative h-[600px] w-full flex items-center justify-center bg-transparent mt-[-50px]">
+      {rings.map((radius, index) => (
+        <OrbitRing key={index} radius={radius} />
+      ))}
+      
+      <div className="relative z-10 bg-gradient-to-r from-[#ff1cf7] via-[#b249f8] to-[#7928ca] rounded-full p-2 backdrop-blur-sm border border-white/10 animate-pulse">
+        <div className="w-10 h-10"></div>
       </div>
+
+      {groupedSkills.map((skillsOnRing, ringIndex) => {
+        const radius = rings[ringIndex];
+        const customAngles = CUSTOM_LAYOUTS[radius];
+        
+        return skillsOnRing.map((skill, i) => (
+          <OrbitingIcon
+            key={`${skill.icon}-${ringIndex}-${i}`}
+            radius={radius}
+            angle={customAngles[i]}
+            icon={skill.icon}
+          />
+        ));
+      })}
     </div>
   );
 }
