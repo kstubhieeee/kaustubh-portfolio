@@ -16,7 +16,7 @@ export default function Terminal() {
 
   const handleCommand = (inputCmd: string) => {
     const cmd = inputCmd.trim().toLowerCase();
-    
+
     setHistory([...history, inputCmd]);
     setHistoryIndex(-1);
 
@@ -26,85 +26,115 @@ export default function Terminal() {
         return;
 
       case "help":
-        setCommands([...commands, { 
-          command: inputCmd, 
-          response: "Available commands:\n\n" +
-                   "about         View my introduction and background\n" +
-                   "projects      Browse my portfolio projects\n" +
-                   "skills        See my technical skills\n" +
-                   "contact       Get my contact information\n" +
-                   "blog          Read my latest blog posts\n" +
-                   "clear         Clear the terminal screen\n" +
-                   "help          Show this help message\n" +
-                   "history       Show command history"
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "Available commands:\n\n" +
+              "about         View my introduction and background\n" +
+              "projects      Browse my portfolio projects\n" +
+              "skills        See my technical skills\n" +
+              "contact       Get my contact information\n" +
+              "blog          Read my latest blog posts\n" +
+              "clear         Clear the terminal screen\n" +
+              "help          Show this help message\n" +
+              "history       Show command history",
+          },
+        ]);
         return;
 
       case "about":
-        setCommands([...commands, {
-          command: inputCmd,
-          response: "Hey! I'm Kaustubh Bane, a 19-year-old developer passionate about Web Development, Blockchain, and AI."
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "Hey! I'm Kaustubh Bane, a 19-year-old developer passionate about Web Development, Blockchain, and AI.",
+          },
+        ]);
         return;
 
       case "projects":
-        setCommands([...commands, {
-          command: inputCmd,
-          response: "My Projects:\n\n" +
-                   "• Melodify - Music Streaming Platform\n" +
-                   "• Fee Management System\n" +
-                   "• Mental Health Tracker\n" +
-                   "• Notes Keeper\n" +
-                   "• Roomzy - Room Rental Platform\n" +
-                   "• TalentLink - Influencer Platform"
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "My Projects:\n\n" +
+              "• Melodify - Music Streaming Platform\n" +
+              "• Fee Management System\n" +
+              "• Mental Health Tracker\n" +
+              "• Notes Keeper\n" +
+              "• Roomzy - Room Rental Platform\n" +
+              "• TalentLink - Influencer Platform",
+          },
+        ]);
         return;
 
       case "skills":
-        setCommands([...commands, {
-          command: inputCmd,
-          response: "Technical Skills:\n\n" +
-                   "• Frontend: React.js, Next.js, TypeScript\n" +
-                   "• Backend: Node.js, Express.js\n" +
-                   "• Database: MongoDB, MySQL\n" +
-                   "• Tools: Git, VS Code, Figma"
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "Technical Skills:\n\n" +
+              "• Frontend: React.js, Next.js, TypeScript\n" +
+              "• Backend: Node.js, Express.js\n" +
+              "• Database: MongoDB, MySQL\n" +
+              "• Tools: Git, VS Code, Figma",
+          },
+        ]);
         return;
 
       case "contact":
-        setCommands([...commands, {
-          command: inputCmd,
-          response: "Contact Information:\n\n" +
-                   "Email: banekaustubh27@gmail.com\n" +
-                   "GitHub: github.com/kstubhieeee\n" +
-                   "LinkedIn: linkedin.com/in/kstubhie\n" +
-                   "Twitter: twitter.com/kstubhiee"
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "Contact Information:\n\n" +
+              "Email: banekaustubh27@gmail.com\n" +
+              "GitHub: github.com/kstubhieeee\n" +
+              "LinkedIn: linkedin.com/in/kstubhie\n" +
+              "Twitter: twitter.com/kstubhiee",
+          },
+        ]);
         return;
 
       case "blog":
-        setCommands([...commands, {
-          command: inputCmd,
-          response: "Latest Blog Posts:\n\n" +
-                   "• The Future of Web Development\n" +
-                   "• Mastering TypeScript\n" +
-                   "• Building Scalable React Applications\n" +
-                   "• Optimizing React Performance"
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response:
+              "Latest Blog Posts:\n\n" +
+              "• The Future of Web Development\n" +
+              "• Mastering TypeScript\n" +
+              "• Building Scalable React Applications\n" +
+              "• Optimizing React Performance",
+          },
+        ]);
         return;
 
       case "history":
-        setCommands([...commands, { 
-          command: inputCmd, 
-          response: history.map((cmd, i) => `${i + 1}  ${cmd}`).join("\n")
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response: history.map((cmd, i) => `${i + 1}  ${cmd}`).join("\n"),
+          },
+        ]);
         return;
 
       default:
-        setCommands([...commands, { 
-          command: inputCmd, 
-          response: `Command '${cmd}' not found. Type 'help' for available commands.`
-        }]);
+        setCommands([
+          ...commands,
+          {
+            command: inputCmd,
+            response: `Command '${cmd}' not found. Type 'help' for available commands.`,
+          },
+        ]);
     }
   };
 
