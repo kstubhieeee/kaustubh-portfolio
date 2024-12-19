@@ -1,8 +1,9 @@
 export const blogs = [
   {
-    id: '1',
+    id: "1",
     title: "The Future of Web Development: What's Coming in 2024",
-    excerpt: "Explore the upcoming trends in web development, from AI integration to WebAssembly and Edge Computing.",
+    excerpt:
+      "Explore the upcoming trends in web development, from AI integration to WebAssembly and Edge Computing.",
     content: `
 # The Future of Web Development: What's Coming in 2024
 
@@ -67,14 +68,15 @@ The focus on developer experience is not just about making developers' lives eas
 
 As we look towards 2024, it's clear that web development is becoming more powerful, more complex, and more exciting than ever before. Whether you're a seasoned developer or just starting out, there's never been a better time to be involved in web development. The key to success will be staying curious, continually learning, and being willing to adapt to new technologies and paradigms as they emerge.
     `,
-    date: 'Mar 15, 2024',
-    readTime: '8 min read',
-    category: 'Web Development'
+    date: "Mar 15, 2024",
+    readTime: "8 min read",
+    category: "Web Development",
   },
   {
-    id: '2',
+    id: "2",
     title: "Mastering TypeScript: Advanced Types and Patterns",
-    excerpt: "Deep dive into TypeScript's advanced features, from conditional types to mapped types and decorators.",
+    excerpt:
+      "Deep dive into TypeScript's advanced features, from conditional types to mapped types and decorators.",
     content: `
 # Mastering TypeScript: Advanced Types and Patterns
 
@@ -163,14 +165,15 @@ This pattern is particularly useful when working with complex data structures or
 
 Mastering these advanced TypeScript features and patterns can significantly improve your ability to write safe, maintainable, and expressive code. As you continue to work with TypeScript, you'll find more opportunities to leverage these powerful features to solve complex problems and build robust applications.
     `,
-    date: 'Mar 12, 2024',
-    readTime: '10 min read',
-    category: 'TypeScript'
+    date: "Mar 12, 2024",
+    readTime: "10 min read",
+    category: "TypeScript",
   },
   {
-    id: '3',
+    id: "3",
     title: "Building Scalable React Applications",
-    excerpt: "Learn best practices for structuring large React applications with modern architecture patterns.",
+    excerpt:
+      "Learn best practices for structuring large React applications with modern architecture patterns.",
     content: `
 # Building Scalable React Applications
 
@@ -255,14 +258,15 @@ A comprehensive testing strategy is crucial for maintaining a large React applic
 
 Building scalable React applications is as much about architecture and design as it is about coding. By following these best practices and continually refining your approach, you can create React applications that are not only powerful and feature-rich, but also maintainable and scalable over time.
     `,
-    date: 'Mar 10, 2024',
-    readTime: '12 min read',
-    category: 'React'
+    date: "Mar 10, 2024",
+    readTime: "12 min read",
+    category: "React",
   },
   {
-    id: '4',
+    id: "4",
     title: "Mastering CSS Grid: Advanced Layouts Made Easy",
-    excerpt: "Dive deep into CSS Grid and learn how to create complex, responsive layouts with ease.",
+    excerpt:
+      "Dive deep into CSS Grid and learn how to create complex, responsive layouts with ease.",
     content: `
 # Mastering CSS Grid: Advanced Layouts Made Easy
 
@@ -349,14 +353,15 @@ This creates a layout where items can span multiple rows, creating a masonry-lik
 
 CSS Grid is a powerful tool that can significantly simplify the process of creating complex layouts. By mastering these advanced techniques, you'll be well-equipped to tackle even the most challenging layout designs.
     `,
-    date: 'Mar 8, 2024',
-    readTime: '10 min read',
-    category: 'CSS'
+    date: "Mar 8, 2024",
+    readTime: "10 min read",
+    category: "CSS",
   },
   {
-    id: '5',
+    id: "5",
     title: "Optimizing React Performance: A Deep Dive",
-    excerpt: "Explore advanced techniques to boost your React application's performance and create smoother user experiences.",
+    excerpt:
+      "Explore advanced techniques to boost your React application's performance and create smoother user experiences.",
     content: `
 # Optimizing React Performance: A Deep Dive
 
@@ -463,12 +468,12 @@ Always use production builds for deployed applications. Production builds includ
 
 Use the React DevTools Profiler to identify performance bottlenecks in your application. It can help you pinpoint which components are rendering unnecessarily or taking too long to render.
 
-## Conclusion
+## Conclusion 
 
 Optimizing React performance is an ongoing process that requires a deep understanding of how React works and careful consideration of your application's specific needs. By implementing these advanced techniques and regularly profiling your application, you can ensure that your React applications remain fast and responsive, even as they grow in complexity.
     `,
-    date: 'Mar 5, 2024',
-    readTime: '15 min read',
-    category: 'React'
-  }
+    date: "Mar 5, 2024",
+    readTime: "15 min read",
+    category: "React",
+  },
 ];
