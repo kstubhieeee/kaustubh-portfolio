@@ -43,8 +43,6 @@ To run this portfolio locally, follow these steps:
 5. **Visit the local server**:
    Open [http://localhost:5173](http://localhost:5173) in your browser to view the portfolio.
 
-#
-
 ## License
 
 This project is licensed under the MIT License.
