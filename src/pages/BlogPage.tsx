@@ -27,7 +27,8 @@ export default function BlogPage() {
                   transition={{ duration: 1 }}
                   className="absolute inset-0 pointer-events-none"
                   style={{
-                    background: "radial-gradient(circle at center, #ffffff10 0%, transparent 70%)",
+                    background:
+                      "radial-gradient(circle at center, #ffffff10 0%, transparent 70%)",
                   }}
                 />
                 <motion.h1

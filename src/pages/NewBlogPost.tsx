@@ -71,7 +71,6 @@ export default function NewBlogPost() {
                 required
               />
             </div>
-
             <div className="flex justify-end">
               <button
                 type="submit"

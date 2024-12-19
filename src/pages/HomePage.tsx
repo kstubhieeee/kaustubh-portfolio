@@ -259,7 +259,6 @@ export default function HomePage() {
           <SkillsSection />
         </div>
       </section>
-
       <section
         id="projects"
         className="py-20 relative section-transition bg-[#000000]"

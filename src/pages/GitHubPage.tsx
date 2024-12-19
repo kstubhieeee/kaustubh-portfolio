@@ -24,10 +24,11 @@ export default function GitHubPage() {
             transition={{ duration: 1 }}
             className="absolute inset-0 pointer-events-none"
             style={{
-              background: "radial-gradient(circle at center, #ffffff10 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle at center, #ffffff10 0%, transparent 70%)",
             }}
           />
-          
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,15 +39,13 @@ export default function GitHubPage() {
               GitHub Stats
             </span>
           </motion.h1>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-gray-400 max-w-3xl mx-auto text-lg"
-          >
-           
-          </motion.p>
+          ></motion.p>
         </div>
 
         <GitHubStats />
