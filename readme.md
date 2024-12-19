@@ -14,7 +14,7 @@ This portfolio website is designed to feature Kaustubh's skills, projects, and e
 
 ## Technologies Used
 
-- **Front-end**: Next.js, Tailwind CSS, TypeScript, framer-motion
+- **Front-end**: ReactJS , Tailwind CSS, TypeScript, framer-motion
 - **Back-end**: Node.js, Express
 - **Additional Libraries**: Lucide React (for icons)
 - **Tools & Frameworks**: Git, GitHub, Vite, Figma
