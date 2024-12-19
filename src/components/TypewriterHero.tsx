@@ -1,4 +1,4 @@
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 
 export default function TypewriterHero() {
   return (
@@ -7,12 +7,17 @@ export default function TypewriterHero() {
         <span className="bg-gradient-to-r from-[#ff1cf7] via-[#b249f8] to-[#7928ca] text-transparent bg-clip-text">
           <Typewriter
             options={{
-              strings: ['Web Developer', 'Blockchain Enthusiast', 'AI Enthusiast'],
+              strings: [
+                "Web Developer",
+                "Blockchain Enthusiast",
+                "AI Enthusiast",
+              ],
               autoStart: true,
               loop: true,
               delay: 75,
               deleteSpeed: 50,
-              wrapperClassName: "bg-gradient-to-r from-[#ff1cf7] via-[#b249f8] to-[#7928ca] text-transparent bg-clip-text"
+              wrapperClassName:
+                "bg-gradient-to-r from-[#ff1cf7] via-[#b249f8] to-[#7928ca] text-transparent bg-clip-text",
             }}
           />
         </span>

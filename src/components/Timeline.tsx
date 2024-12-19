@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { Calendar, Briefcase, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Calendar, Briefcase, ArrowRight } from "lucide-react";
 
 interface TimelineItem {
   date: string;
@@ -15,25 +15,28 @@ const timelineItems: TimelineItem[] = [
     date: "June 2024 - July 2024",
     title: "Web Development Internship",
     company: "SLRTCE (In-house)",
-    description: "Developed a Music platform 'Melodify' using PHP, MySQL, and modern web technologies",
+    description:
+      "Developed a Music platform 'Melodify' using PHP, MySQL, and modern web technologies",
     skills: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-    link: "https://github.com/kstubhieeee/Melodify"
+    link: "https://github.com/kstubhieeee/Melodify",
   },
   {
     date: "Dec 2023 - Jan 2024",
     title: "CyberSecurity Internship",
     company: "SLRTCE (In-house)",
-    description: "Gained hands-on experience in cybersecurity practices and threat detection",
-    skills: ["Network Security", "Penetration Testing", "Security Protocols"]
+    description:
+      "Gained hands-on experience in cybersecurity practices and threat detection",
+    skills: ["Network Security", "Penetration Testing", "Security Protocols"],
   },
   {
     date: "Sept 2023 - Oct 2023",
     title: "Java Development Internship",
     company: "Engineering Minds",
-    description: "Built a scaleable Library Management System using Java and MySQL",
+    description:
+      "Built a scaleable Library Management System using Java and MySQL",
     skills: ["Java", "MySQL", "JDBC", "Swing"],
-    link: "https://github.com/kstubhieeee/Fee-Management-System"
-  }
+    link: "https://github.com/kstubhieeee/Fee-Management-System",
+  },
 ];
 
 export default function Timeline() {
@@ -82,9 +85,7 @@ export default function Timeline() {
                 <span>{item.company}</span>
               </div>
 
-              <p className="text-gray-300 mb-4">
-                {item.description}
-              </p>
+              <p className="text-gray-300 mb-4">{item.description}</p>
 
               {item.skills && (
                 <div className="flex flex-wrap gap-2 mb-4">

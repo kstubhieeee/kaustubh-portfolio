@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface BlogCardProps {
   id: string;
@@ -12,7 +12,15 @@ interface BlogCardProps {
   index: number;
 }
 
-export default function BlogCard({ id, title, excerpt, date, readTime, category, index }: BlogCardProps) {
+export default function BlogCard({
+  id,
+  title,
+  excerpt,
+  date,
+  readTime,
+  category,
+  index,
+}: BlogCardProps) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -30,14 +38,12 @@ export default function BlogCard({ id, title, excerpt, date, readTime, category,
           {readTime}
         </span>
       </div>
-      
+
       <h3 className="text-xl font-bold text-white group-hover:text-[#ff1cf7] transition-colors mb-2">
         {title}
       </h3>
-      
-      <p className="text-gray-400 mb-4 line-clamp-2">
-        {excerpt}
-      </p>
+
+      <p className="text-gray-400 mb-4 line-clamp-2">{excerpt}</p>
 
       <div className="flex items-center justify-between">
         <span className="bg-[#ff1cf7]/10 text-[#ff1cf7] px-3 py-1 rounded-full text-sm">

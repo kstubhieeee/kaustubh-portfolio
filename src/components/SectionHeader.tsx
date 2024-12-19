@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface SectionHeaderProps {
   title: string;
@@ -19,9 +19,7 @@ export default function SectionHeader({ title, subtitle }: SectionHeaderProps) {
         </span>
       </h2>
       {subtitle && (
-        <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-          {subtitle}
-        </p>
+        <p className="text-gray-400 max-w-3xl mx-auto text-lg">{subtitle}</p>
       )}
     </motion.div>
   );

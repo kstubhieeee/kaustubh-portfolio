@@ -33,7 +33,7 @@ export default function Navbar() {
   const handleSectionClick = (href: string) => {
     setIsOpen(false);
     if (!isHomePage) {
-      navigate('/', { state: { scrollTo: href } });
+      navigate("/", { state: { scrollTo: href } });
     }
   };
 
@@ -104,10 +104,7 @@ export default function Navbar() {
           </Link>
 
           <div className="flex md:hidden">
-            <button
-              onClick={toggleDropdown}
-              className="text-accent-pink"
-            >
+            <button onClick={toggleDropdown} className="text-accent-pink">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>

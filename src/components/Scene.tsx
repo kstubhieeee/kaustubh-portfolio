@@ -1,14 +1,16 @@
-import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
-import { Sphere, MeshDistortMaterial } from '@react-three/drei';
+import { useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import { Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 export default function Scene() {
   const sphereRef = useRef<THREE.Mesh>(null);
 
   useFrame(({ clock }) => {
     if (sphereRef.current) {
-      sphereRef.current.rotation.x = Math.sin(clock.getElapsedTime() * 0.3) * 0.2;
-      sphereRef.current.rotation.y = Math.sin(clock.getElapsedTime() * 0.2) * 0.2;
+      sphereRef.current.rotation.x =
+        Math.sin(clock.getElapsedTime() * 0.3) * 0.2;
+      sphereRef.current.rotation.y =
+        Math.sin(clock.getElapsedTime() * 0.2) * 0.2;
     }
   });
 

@@ -222,9 +222,7 @@ export default function GitHubStats() {
         animate={{ opacity: 1, y: 0 }}
         className="bg-white/5 backdrop-blur-lg rounded-lg p-6 border border-white/10"
       >
-        <h3 className="text-xl font-bold text-white mb-6">
-          GitHub Trophies
-        </h3>
+        <h3 className="text-xl font-bold text-white mb-6">GitHub Trophies</h3>
         <img
           src="https://github-profile-trophy.vercel.app/?username=kstubhieeee&theme=nord&no-frame=true&no-bg=true&margin-w=4"
           alt="GitHub Trophies"

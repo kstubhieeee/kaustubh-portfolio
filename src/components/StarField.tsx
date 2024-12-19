@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 interface Star {
   x: number;
@@ -15,7 +15,7 @@ export default function StarField() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -23,14 +23,14 @@ export default function StarField() {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     const stars: Star[] = Array.from({ length: 200 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       size: Math.random() * 1.5 + 0.5,
       speed: Math.random() * 0.2 + 0.1,
-      opacity: Math.random() * 0.5 + 0.3
+      opacity: Math.random() * 0.5 + 0.3,
     }));
 
     function drawStar(star: Star) {
@@ -45,7 +45,7 @@ export default function StarField() {
       if (!ctx || !canvas) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      stars.forEach(star => {
+      stars.forEach((star) => {
         star.y += star.speed;
         if (star.y > canvas.height) {
           star.y = 0;
@@ -61,7 +61,7 @@ export default function StarField() {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
@@ -69,7 +69,7 @@ export default function StarField() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 pointer-events-none"
-      style={{ background: 'transparent' }}
+      style={{ background: "transparent" }}
     />
   );
 }

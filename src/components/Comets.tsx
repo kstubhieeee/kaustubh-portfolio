@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 interface Comet {
   x: number;
@@ -16,7 +16,7 @@ export default function Comets() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -25,19 +25,19 @@ export default function Comets() {
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     // Fixed 45-degree angle in radians
     const angle = Math.PI / 4;
 
     // Create 3 comets with wider spacing
     const comets: Comet[] = Array.from({ length: 3 }, (_, index) => ({
-      x: (index * canvas.width / 2) - 100, // Spread comets across the width
+      x: (index * canvas.width) / 2 - 100, // Spread comets across the width
       y: -20,
       size: 2.5, // Consistent size
       speed: 3, // Consistent speed
       active: false,
-      delay: index * 3000 // 3 second delay between each comet
+      delay: index * 3000, // 3 second delay between each comet
     }));
 
     let lastTime = 0;
@@ -54,9 +54,9 @@ export default function Comets() {
         comet.y - tailLength * Math.sin(angle)
       );
 
-      gradient.addColorStop(0, 'rgba(255, 28, 247, 0.8)');
-      gradient.addColorStop(0.4, 'rgba(255, 28, 247, 0.3)');
-      gradient.addColorStop(1, 'rgba(121, 40, 202, 0)');
+      gradient.addColorStop(0, "rgba(255, 28, 247, 0.8)");
+      gradient.addColorStop(0.4, "rgba(255, 28, 247, 0.3)");
+      gradient.addColorStop(1, "rgba(121, 40, 202, 0)");
 
       ctx.beginPath();
       ctx.moveTo(comet.x, comet.y);
@@ -66,7 +66,7 @@ export default function Comets() {
       );
       ctx.strokeStyle = gradient;
       ctx.lineWidth = comet.size;
-      ctx.lineCap = 'round';
+      ctx.lineCap = "round";
       ctx.stroke();
     }
 
@@ -79,14 +79,14 @@ export default function Comets() {
         comets.forEach((comet, index) => {
           comet.active = false;
           // Spread starting positions evenly across the width
-          comet.x = (index * canvas.width / 2) - 100;
+          comet.x = (index * canvas.width) / 2 - 100;
           comet.y = -20;
           comet.delay = index * 3000;
         });
         lastTime = currentTime;
       }
 
-      comets.forEach(comet => {
+      comets.forEach((comet) => {
         // Activate comet after its delay
         if (!comet.active && currentTime - lastTime >= comet.delay) {
           comet.active = true;
@@ -112,7 +112,7 @@ export default function Comets() {
     animate(0);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 
@@ -120,7 +120,7 @@ export default function Comets() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-10"
-      style={{ background: 'transparent' }}
+      style={{ background: "transparent" }}
     />
   );
 }
