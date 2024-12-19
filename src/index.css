@@ -29,11 +29,9 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-
 html::-webkit-scrollbar {
   display: none;
 }
 *::-webkit-scrollbar {
   display: none;
 }
-

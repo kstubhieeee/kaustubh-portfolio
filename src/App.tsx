@@ -1,9 +1,9 @@
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import GitHubPage from './pages/GitHubPage';
-import BlogPage from './pages/BlogPage';
-import NewBlogPost from './pages/NewBlogPost';
-import Navbar from './components/Navbar';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import GitHubPage from "./pages/GitHubPage";
+import BlogPage from "./pages/BlogPage";
+import NewBlogPost from "./pages/NewBlogPost";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -18,4 +18,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
