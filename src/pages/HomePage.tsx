@@ -151,7 +151,7 @@ export default function HomePage() {
             </h1>
             <div className="flex flex-wrap justify-center gap-2 mt-3 text-gray-300 mb-4 font-inter">
               <span className="flex text-3xl md:text-3xl items-center gap-1">
-                19
+                20
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-3 text-gray-300 mb-4 font-inter">
